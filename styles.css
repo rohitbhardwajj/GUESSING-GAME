@@ -1,0 +1,98 @@
+@keyframes borderRotate {
+    0% {
+      border-color: red;
+    }
+    25% {
+      border-color: yellow;
+    }
+    50% {
+      border-color: green;
+    }
+    75% {
+      border-color: blue;
+    }
+    100% {
+      border-color: red;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    background-image: url('https://images.wallpaperscraft.com/image/single/dollars_bills_currency_213590_3840x2400.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border: 5px solid; /* Initial border */
+    animation: borderRotate 4s linear infinite; /* Apply animation */
+    max-width: 90%;
+    width: 400px; /* Fixed width for laptop */
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input, button {
+    display: block;
+    width: calc(100% - 20px);
+    margin: 0 auto 10px;
+    padding: 10px;
+}
+
+button {
+    width: auto;
+    padding: 10px 20px;
+}
+
+#result {
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 600px) {
+    body {
+        background-image: url('https://images.wallpaperscraft.com/image/single/landscape_mountains_forest_214015_3840x2160.jpg'); /* Landscape background for mobile */
+        background-size: cover;
+        background-position: center;
+        padding: 10px; /* Add padding around the body for mobile */
+    }
+
+    .container {
+        width: 100%;
+        max-width: 100%; /* Ensure container uses full width on mobile */
+        padding: 15px; /* Adjust padding for mobile */
+        box-sizing: border-box; /* Include padding in the total width */
+    }
+
+    input, button {
+        width: 100%; /* Full width for inputs and buttons on mobile */
+        padding: 12px; /* Adjust padding for mobile */
+    }
+
+    button {
+        padding: 12px 20px; /* Adjust button padding for mobile */
+    }
+}
